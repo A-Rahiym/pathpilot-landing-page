@@ -30,12 +30,12 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <motion.div className="flex-shrink-0" whileHover={{ scale: 1.05 }}>
-            <Link href="/" className="flex items-center gap-1">
+            <Link href="/" className="flex items-center align-middle gap-1">
               <Image
-              src='/Logo.png'
+              src='/Logo.svg'
               alt="logo"
-              width={64}
-              height={64}
+              width={48}
+              height={48}
               />
               <span className="text-2xl font-bold text-primary font-heading">PathPilot</span>
             </Link>
