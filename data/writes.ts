@@ -97,7 +97,7 @@ export const writes = {
 interface TeamMember {
   name: string;
   role: string;
-  image: string; // use Lucide React icon component
+  image: string; 
 }
 
 export const teamMembers: TeamMember[] = [
