@@ -32,7 +32,7 @@ export default function Hero() {
     >
       {/* Background Image Overlay */}
       <div className="absolute inset-0 opacity-20">
-        <Image src="/navigation-ai-background.jpg" alt="Background" fill className="object-cover" priority />
+        <Image src="/bg.jpg" alt="Background" fill className="object-cover" priority />
       </div>
 
       <motion.div

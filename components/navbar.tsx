@@ -54,7 +54,7 @@ export default function Navbar() {
           {/* CTA Button */}
           <div className="hidden md:flex gap-4">
             <motion.a
-              href="https://forms.gle/pathpilot-waitlist"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdfQN2emiyQFNfz2ePK7LlJq4po0QI-8qenR78VfI7I9CUP2w/viewform?usp=dialog"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-primary text-primary-foreground px-6 py-2 rounded-full hover:bg-primary/90 transition-colors"
@@ -64,7 +64,6 @@ export default function Navbar() {
               Join Waitlist
             </motion.a>
           </div>
-
           {/* Mobile Menu Button */}
           <motion.button
             onClick={toggleMenu}
@@ -96,7 +95,7 @@ export default function Navbar() {
               </motion.div>
             ))}
             <motion.a
-              href="https://forms.gle/pathpilot-waitlist"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdfQN2emiyQFNfz2ePK7LlJq4po0QI-8qenR78VfI7I9CUP2w/viewform?usp=dialog"
               target="_blank"
               rel="noopener noreferrer"
               className="block mt-4 bg-primary text-primary-foreground px-6 py-2 rounded-full hover:bg-primary/90 transition-colors text-center"
