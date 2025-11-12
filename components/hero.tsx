@@ -43,14 +43,16 @@ export default function Hero() {
       >
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Text Content */}
-          <motion.div variants={itemVariants}>
+          <motion.div variants={itemVariants} className="text-center md:text-left">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance leading-tight font-heading">
               {writes.hero.title}
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-8 text-pretty">{writes.hero.subtitle}</p>
-            <div className="flex gap-4 flex-wrap">
+            <p className="text-lg md:text-xl text-gray-300 mb-8 text-pretty">
+              {writes.hero.subtitle}
+            </p>
+            <div className="flex flex-wrap justify-center md:justify-start gap-4">
               <motion.a
-                href="https://forms.gle/pathpilot-waitlist"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdfQN2emiyQFNfz2ePK7LlJq4po0QI-8qenR78VfI7I9CUP2w/viewform?usp=dialog"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold hover:bg-primary/90 transition-colors"
@@ -69,14 +71,18 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Image */}
-          <motion.div className="hidden md:block" variants={itemVariants}>
+          {/* Image (now visible on mobile) */}
+          <motion.div
+            variants={itemVariants}
+            className="flex justify-center md:justify-end mt-10 md:mt-0"
+          >
             <Image
-              src="/phone-navigation-app-mockup.jpg"
+              src="/phone2.png"
               alt="PathPilot App"
-              width={400}
-              height={500}
-              className="rounded-lg"
+              width={200}
+              height={200}
+              className="rounded-lg w-3/4 sm:w-2/3 md:w-auto"
+              priority
             />
           </motion.div>
         </div>

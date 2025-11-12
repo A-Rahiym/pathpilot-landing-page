@@ -18,7 +18,7 @@ export default function Home() {
       <About />
       <WhyItMatters />
       <Features />
-      <SeeHowItWorks />
+      {/* <SeeHowItWorks /> */}
       <CTASection />
       <Team />
       <Contact />

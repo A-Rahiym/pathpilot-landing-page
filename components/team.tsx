@@ -1,40 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { User } from "lucide-react"; // Lucide profile icon
-
-interface TeamMember {
-  name: string;
-  role: string;
-  image: string; // use Lucide React icon component
-}
-
-const teamMembers: TeamMember[] = [
-  {
-    name: "Saidu Hamza",
-    role: "CEO",
-    image: "/hamza.jpg",
-  },
-  {
-    name: "Salamatu Umar Ardo",
-    role: "Project Manager",
-    image: "/salma.jpg",
-  },
-  {
-    name: "Abdulrahman Abdulrahim",
-    role: "FE Engineer",
-    image: "/abdul.jpg",
-  },
-  {
-    name: "Nasir Muhd Kabir",
-    role: "AI Engineer",
-    image: "/kabiru.jpg",
-  },
-  {
-    name: "Yero Muhd",
-    role: "Quality Assurance",
-    image: "/yero.jpg",
-  },
-];
+import { teamMembers } from "@/data/writes";
 
 export default function Team() {
   const containerVariants = {

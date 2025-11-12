@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { writes } from "@/data/writes"
@@ -37,6 +36,7 @@ export default function WhyItMatters() {
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,13 +47,15 @@ export default function WhyItMatters() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground font-heading">
             {writes.whyItMatters.title}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{writes.whyItMatters.description}</p>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            {writes.whyItMatters.description}
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left: Stats with Icons */}
           <motion.div
-            className="space-y-6"
+            className="space-y-6 order-2 md:order-1"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -62,14 +64,22 @@ export default function WhyItMatters() {
             {writes.whyItMatters.features.map((feature, idx) => {
               const IconComponent = iconMap[feature.icon] || AlertCircle
               return (
-                <motion.div key={idx} variants={itemVariants} className="border-l-4 border-primary pl-6">
+                <motion.div
+                  key={idx}
+                  variants={itemVariants}
+                  className="border-l-4 border-primary pl-6"
+                >
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
                       <IconComponent className="w-5 h-5 text-primary" />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground">{feature.title}</h3>
+                    <h3 className="text-xl font-bold text-foreground">
+                      {feature.title}
+                    </h3>
                   </div>
-                  <p className="text-muted-foreground mb-3">{feature.description}</p>
+                  <p className="text-muted-foreground mb-3">
+                    {feature.description}
+                  </p>
                   <ul className="space-y-1 ml-11">
                     {feature.subPoints.map((point, pointIdx) => (
                       <motion.li
@@ -90,9 +100,9 @@ export default function WhyItMatters() {
             })}
           </motion.div>
 
-          {/* Right: Image */}
+          {/* Right: Image (now visible on mobile) */}
           <motion.div
-            className="hidden md:block"
+            className="flex justify-center md:justify-end order-1 md:order-2"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -103,7 +113,8 @@ export default function WhyItMatters() {
               alt="Why PathPilot Matters"
               width={400}
               height={400}
-              className="rounded-lg shadow-lg"
+              className="rounded-lg shadow-lg w-3/4 sm:w-2/3 md:w-auto"
+              priority
             />
           </motion.div>
         </div>
